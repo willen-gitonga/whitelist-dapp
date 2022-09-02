@@ -16,13 +16,13 @@ export default function Home() {
   const [numberOfWhitelisted, setNumberOfWhitelisted] = useState(0);
 
   //reference for the web3 modal
-  const Web3ModalRef = useRef();
+  const  web3ModalRef = useRef();
 
   //provider for reading data from the blockchain 
   //signer for writing data to the blockchain
   const getProviderOrSigner = async (needSigner = false) =>{
 
-    const provider = await Web3ModalRef.current.connect();
+    const provider = await  web3ModalRef.current.connect();
     const web3Provider = new providers.Web3Provider(providers);
 
     //check if user connected to the rinkeby network
